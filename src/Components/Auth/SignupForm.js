@@ -125,11 +125,11 @@ function SignupForm(props){
                 break;
             case "login":
                 errors.login =
-                    value.length < 5 ? "minimum 6 characaters required" : "";
+                    value.length < 5 ? "minimum 5 characaters required" : "";
                 break;
             case "password":
                 errors.password =
-                    value.length < 5 ? "minimum 8 characaters required" : "";
+                    value.length < 5 ? "minimum 5 characaters required" : "";
                 break;
             default:
                 break;

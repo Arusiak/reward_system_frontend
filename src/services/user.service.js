@@ -51,11 +51,22 @@ const sendGift = (from,to,quantity = 1) => {
             return response.data;
         });
 };
+const getUserPoints = (id) => {
+    return axios
+        .get(`${API_URL}user/${id}/point`, {
+            headers: authHeader(),
+        })
+        .then((response) => {
+            return response.data;
+        });
+};
+
 
 export default {
     getUser,
     getAvailableUsers,
     sendGift,
     getNotifications,
-    getAdminNotifications
+    getAdminNotifications,
+    getUserPoints
 };

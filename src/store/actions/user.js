@@ -1,4 +1,4 @@
-import {GET_AVAILABLE_USERS, GET_NOTIFICATIONS, GET_USER, GET_ADMIN_NOTIFICATIONS} from "./types";
+import {GET_AVAILABLE_USERS, GET_NOTIFICATIONS, GET_USER, GET_ADMIN_NOTIFICATIONS,  GET_USER_POINTS} from "./types";
 import UserService from "../../services/user.service";
 
 export const getUser = () => (dispatch) => {
@@ -57,6 +57,17 @@ export const sendGift = (from,to) => (dispatch) =>{
             //     payload: data
             // })
             dispatch(getAvailableUsers(from))
+
+            return Promise.resolve();
+        })
+}
+export const getUserPoints = (id) => (dispatch) =>{
+    UserService.getUserPoints(id)
+        .then((data) =>{
+            dispatch({
+                type:  GET_USER_POINTS,
+                payload: data
+            })
 
             return Promise.resolve();
         })

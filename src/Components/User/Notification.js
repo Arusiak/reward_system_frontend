@@ -17,14 +17,6 @@ function Notification({notification,userId}){
                     {/*    <a href="#" className='btn btn-dark'><i className="fas fa-times"></i></a>*/}
                     {/*</div>*/}
                 </div>
-                {/*<div className="row mt-2 p-3 justify-content-between ">*/}
-                {/*    <div className="col-sm-11">*/}
-                {/*        <p className='notification'>Your points id Null</p>*/}
-                {/*    </div>*/}
-                {/*    <div className="col-sm-1">*/}
-                {/*        <a href="#" className='btn btn-dark'><i className="fas fa-times"></i></a>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
             </>
         );
 }

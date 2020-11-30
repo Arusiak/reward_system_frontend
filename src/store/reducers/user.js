@@ -1,9 +1,10 @@
-import {GET_AVAILABLE_USERS, GET_NOTIFICATIONS, GET_ADMIN_NOTIFICATIONS} from "../actions/types";
+import {GET_AVAILABLE_USERS, GET_NOTIFICATIONS, GET_ADMIN_NOTIFICATIONS, GET_USER_POINTS} from "../actions/types";
 
 const initialState = {
     available: [],
     notifications: [],
-    adminNotifications: []
+    adminNotifications: [],
+    points: []
 };
 
 export default function (state = initialState, action) {
@@ -24,6 +25,11 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 adminNotifications: payload
+            };
+        case GET_USER_POINTS:
+            return {
+                ...state,
+                points: payload
             };
         default:
             return state;
